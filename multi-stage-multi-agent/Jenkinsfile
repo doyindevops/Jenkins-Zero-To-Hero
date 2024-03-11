@@ -6,7 +6,7 @@ pipeline {
         docker { image 'nginx:1.25.4' }
       }
       steps {
-        sh 'THIS IS NGINX'
+        sh 'nginx -v'
       }
     }
     stage('Front-end') {
@@ -14,7 +14,7 @@ pipeline {
         docker { image 'redis:latest' }
       }
       steps {
-        sh 'THIS IS REDIS'
+        sh 'redis-server --version'
       }
     }
   }
